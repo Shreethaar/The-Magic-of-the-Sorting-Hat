@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Student Information Form</h1>
+    <form action="/" method="POST">
+        <label for="gpa">GPA:</label>
+        <input type="text" id="gpa" name="gpa"><br><br>
+
+        <label for="hometown">Hometown (State):</label>
+        <select id="hometown" name="hometown">
+            <option value="State1">State1</option>
+            <option value="State2">State2</option>
+            <!-- Add other states as needed -->
+        </select><br><br>
+
+        <label for="resident_college">Resident College:</label>
+        <select id="resident_college" name="resident_college">
+            <option value="College1">College1</option>
+            <option value="College2">College2</option>
+            <!-- Add other colleges as needed -->
+        </select><br><br>
+
+        <label for="co_curriculum_activities">Co-curriculum Activities:</label>
+        <input type="text" id="co_curriculum_activities" name="co_curriculum_activities"><br><br>
+
+        <label for="leadership">Leadership (Yes/No):</label>
+        <input type="radio" id="leadership_yes" name="leadership" value="Yes">
+        <label for="leadership_yes">Yes</label>
+        <input type="radio" id="leadership_no" name="leadership" value="No">
+        <label for="leadership_no">No</label><br><br>
+
+        <label for="favourite_cuisine">Favourite Cuisine:</label><br>
+        <input type="checkbox" id="cuisine_malay" name="favourite_cuisine" value="Malay">
+        <label for="cuisine_malay">Malay</label><br>
+        <input type="checkbox" id="cuisine_chinese" name="favourite_cuisine" value="Chinese">
+        <label for="cuisine_chinese">Chinese</label><br>
+        <input type="checkbox" id="cuisine_indian" name="favourite_cuisine" value="Indian">
+        <label for="cuisine_indian">Indian</label><br>
+        <input type="checkbox" id="cuisine_western" name="favourite_cuisine" value="Western">
+        <label for="cuisine_western">Western</label><br>
+        <input type="checkbox" id="cuisine_japanese" name="favourite_cuisine" value="Japanese">
+        <label for="cuisine_japanese">Japanese</label><br>
+        <input type="checkbox" id="cuisine_korean" name="favourite_cuisine" value="Korean">
+        <label for="cuisine_korean">Korean</label><br>
+        <input type="checkbox" id="cuisine_thai" name="favourite_cuisine" value="Thai">
+        <label for="cuisine_thai">Thai</label><br>
+        <input type="checkbox" id="cuisine_exotic" name="favourite_cuisine" value="Exotic">
+        <label for="cuisine_exotic">Exotic</label><br><br>
+
+        <label for="family_income">Family Income:</label>
+        <input type="text" id="family_income" name="family_income"><br><br>
+
+        <label for="best_friends">Number of Best Friends on Campus:</label>
+        <input type="text" id="best_friends" name="best_friends"><br><br>
+
+        <label for="good_friends">Number of Good Friends on Campus:</label>
+        <input type="text" id="good_friends" name="good_friends"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
+
