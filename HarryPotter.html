@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Potter Prediction Form>blue</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('harrypotter7.jpg') no-repeat center center fixed; /* Replace 'background-image.jpg' with your image URL */
+            background-size: cover;
+           
+            
+        }
+        .container {
+            width: 50%;
+            margin: 10px auto;
+            background-color: rgba(251, 251, 251, 0.9);
+            padding: 20px;
+            box-shadow: 0 0 10px;
+            position: relative;
+            z-index: 1;
+            
+            
+        }
+        h1 {
+            text-align: center;
+            color: #000000; /* Setting title color */
+            
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0 5px;
+            color: #000000; /* Setting title color */
+            font-size: 3ch;
+        }
+        input, select {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            border: none;
+            background-color: #4c65af;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #df0aa6;
+        }
+        #outputLabel {
+            margin-top: 20px;
+            font-weight: bold;
+            display: none;
+        }
+        #output {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #eee;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Harry Potter Prediction Form</h1>
+        <form id="predictionForm">
+            <label for="hometown">Hometown:</label>
+            <select id="hometown" name="hometown" required>
+                <option value="">Select your hometown</option>
+                <option value="Penang">Penang</option>
+                <option value="Perak">Perak</option>
+                <option value="Kedah">Kedah</option>
+                <option value="Perlis">Perlis</option>
+                <option value="Selangor">Selangor</option>
+                <option value="Negeri Sembilan">Negeri Sembilan</option>
+                <option value="Melaka">Melaka</option>
+                <option value="Johor">Johor</option>
+                <option value="Pahang">Pahang</option>
+                <option value="Terengganu">Terengganu</option>
+                <option value="Kelantan">Kelantan</option>
+                <option value="Sabah">Sabah</option>
+                <option value="Sarawak">Sarawak</option>
+            </select>
+            <label for="gpa">GPA:</label>
+            <input type="text" id="gpa" name="gpa" required>
+            
+            <label for="activities">Co-curriculum Activities:</label>
+            <select id="activities" name="activities" required>
+                <option value="">Select your activities</option>
+                <option value="Quidditch">Quidditch</option>
+                <option value="Dueling Club">Dueling Club</option>
+                <option value="Potions Club">Potions Club</option>
+                <option value="Herbology Club">Herbology Club</option>
+            </select>
+            
+            <label for="inasis">Inasis:</label>
+            <select id="inasis" name="inasis" required>
+                <option value="">Select your inasis</option>
+                <option value="MAYBANK">MAYBANK</option>
+                <option value="PROTON">PROTON</option>
+                <option value="TRADEWINDS">TRADEWINDS</option>
+                <option value="MAS">MAS</option>
+                <option value="TNB">TNB</option>
+                <option value="YAB">YAB</option>
+                <option value="MUAMALAT">MUAMALAT</option>
+                <option value="BSN">BSN</option>
+                <option value="TM">TM</option>
+                <option value="BANK ISLAM">BANK ISLAM</option>
+                <option value="SIME DARBY">SIME DARBY</option>
+                <option value="PETRONAS">PETRONAS</option>
+                <option value="SME">SME</option>
+                <option value="PERSISIRAN SINTOK">PERSISIRAN SINTOK</option>
+                <option value="TAMAN UNI">TAMAN UNI</option>
+            </select>
+            
+            <label for="income">Household Income:</label>
+            <input type="text" id="income" name="income" required>
+
+            <label for="hobbies">Hobbies:</label>
+            <input type="text" id="hobbies" name="hobbies" required>
+
+            <label for="friends">Number of Friends:</label>
+            <input type="number" id="friends" name="friends" required>
+
+            <label for="leadership">Leadership (yes/no):</label>
+            <select id="leadership" name="leadership" required>
+            <option value="">Select</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            </select> 
+            
+            <button type="submit">Submit</button>
+        </form>
+        <label id="outputLabel">Prediction Output:</label>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        document.getElementById('predictionForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const hometown = document.getElementById('hometown').value;
+            const gpa = document.getElementById('gpa').value;
+            const activities = document.getElementById('activities').value;
+            const inasis = document.getElementById('inasis').value;
+            const income = document.getElementById('income').value;
+            const hobbies = document.getElementById('hobbies').value;
+            const friends = document.getElementById('friends').value;
+            const leadership = document.getElementById('leadership').value;
+            let output = `
+                <h2>Prediction Result</h2>
+                <p><strong>Hometown:</strong> ${hometown}</p>
+                <p><strong>GPA:</strong> ${gpa}</p>
+                <p><strong>Co-curriculum Activities:</strong> ${activities}</p>
+                <p><strong>Inasis:</strong> ${inasis}</p>
+                <p><strong>Household Income:</strong> ${income}</p>
+                <p><strong>Hobbies:</strong> ${hobbies}</p>
+                <p><strong>Number of Friends:</strong> ${friends}</p>
+                <p><strong>Leadership:</strong> ${leadership}</p>
+            `;
+            document.getElementById('output').innerHTML = output;
+            document.getElementById('output').style.display = 'block';
+            document.getElementById('outputLabel').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

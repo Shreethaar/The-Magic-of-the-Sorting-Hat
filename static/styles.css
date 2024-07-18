@@ -1,46 +1,67 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
+    background: url('harrypotter7.jpg') no-repeat center center fixed; /* Replace 'background-image.jpg' with your image URL */
+    background-size: cover;
+}
+
+.container {
+    width: 50%;
+    margin: 10px auto;
+    background-color: rgba(251, 251, 251, 0.9);
     padding: 20px;
-    background-color: #f4f4f4;
+    box-shadow: 0 0 10px;
+    position: relative;
+    z-index: 1;
 }
 
 h1 {
-    color: #333;
+    text-align: center;
+    color: #000000; /* Setting title color */
 }
 
 form {
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
 }
 
 label {
-    display: block;
-    margin-top: 10px;
+    margin: 10px 0 5px;
+    color: #000000; /* Setting title color */
+    font-size: 3ch;
 }
 
-input[type="text"],
-select {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
+input, select {
+    padding: 10px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 button {
-    margin-top: 20px;
-    padding: 10px 15px;
-    background-color: #5cb85c;
-    color: white;
+    padding: 10px;
     border: none;
-    border-radius: 3px;
+    background-color: #4c65af;
+    color: white;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #4cae4c;
+    background-color: #df0aa6;
 }
 
+#outputLabel {
+    margin-top: 20px;
+    font-weight: bold;
+    display: none;
+}
+
+#output {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    display: none;
+}
