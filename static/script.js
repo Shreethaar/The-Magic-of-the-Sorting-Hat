@@ -16,14 +16,10 @@ document.getElementById('predictionForm').addEventListener('submit', function(ev
     .then(data => {
         let output = `
             <h2>Prediction Result</h2>
-            <p><strong>Hometown:</strong> ${jsonData.hometown}</p>
-            <p><strong>GPA:</strong> ${jsonData.gpa}</p>
-            <p><strong>Co-curriculum Activities:</strong> ${jsonData.activities}</p>
-            <p><strong>Inasis:</strong> ${jsonData.inasis}</p>
-            <p><strong>Household Income:</strong> ${jsonData.income}</p>
+            <p><strong>Number of Best Friends:</strong> ${jsonData.friends}</p>
+            <p><strong>Leadership Experience:</strong> ${jsonData.leadership}</p>
             <p><strong>Hobbies:</strong> ${jsonData.hobbies}</p>
-            <p><strong>Number of Friends:</strong> ${jsonData.friends}</p>
-            <p><strong>Leadership:</strong> ${jsonData.leadership}</p>
+            <p><strong>Inasis:</strong> ${jsonData.inasis}</p>
             <p><strong>Prediction:</strong> ${data.prediction}</p>
         `;
         document.getElementById('output').innerHTML = output;
